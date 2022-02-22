@@ -1,19 +1,14 @@
-enum CAR_COLOR{
-    RED = "red",
-    GREEN = "green",
-    BLUE = "blue",
+const wait = async () => {
+    return new Promise ((resolve, error) => {
+        setTimeout(() => {
+            resolve( 3);
+        }, 2000)
+    })
 }
-
-class Mercedes extends Car {
-    private color: CAR_COLOR = "" as CAR_COLOR;
-
-    setColor(color: CAR_COLOR): void{
-        this.color=color
-    }
-
-   getColor(): CAR_COLOR
-    }
-}
-const car = new Car();
-car.setType(CAR_TYPES.SEDAN)
+(async () =>{
+    console.log(1)
+    console.log(2)
+    console.log(await wait())
+    console.log(4)
+})()
 
